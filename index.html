@@ -19,6 +19,13 @@
   <!-- AddEvent script -->
   <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  
+  <!--firebase sdk links--->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+  
+  <!--end--->
 
 </head>
 
@@ -242,6 +249,52 @@
         </div>
       </div>
     </div>
+            <!-- contact form -->
+        <div id = "contact-form" class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+          <form class="shake" target="_blank" action="index.html" role="form" method="post" id="contactForm"
+            name="contact-form" data-toggle="validator">
+            <!-- Name -->
+            <div class="form-group label-floating">
+              <label class="control-label" for="name">Name</label>
+              <input class="form-control" id="name" type="text" name="name" required
+                data-error="Please enter your name">
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- email -->
+            <div class="form-group label-floating">
+              <label class="control-label" for="email">Email</label>
+              <input class="form-control" id="email" type="email" name="email" required
+                data-error="Please enter your Email">
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- Subject -->
+            <div class="form-group label-floating">
+              <label class="control-label">Subject</label>
+              <input class="form-control" id="msg_subject" type="text" name="subject" required
+                data-error="Please enter your message subject">
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- Message -->
+            <div class="form-group label-floating">
+              <label for="message" class="control-label">Message</label>
+              <textarea class="form-control" rows="3" id="message" name="message" required
+                data-error="Write your message"></textarea>
+              <div class="help-block with-errors"></div>
+            </div>
+            <!-- Form Submit -->
+            <div class="form-submit mt-5">
+              <button class="btn btn-success"><i class="material-icons mdi mdi-message-outline"></i> Send
+                Message</button>
+              <div id="msgSubmit" class="h3 text-center hidden"></div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- <div id="success_message" class="alert alert-success">
+              <strong>Success!</strong> This alert box could indicate a successful or positive action.
+            </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
 
 
   </section>
@@ -323,6 +376,24 @@
     <!-- Copyright -->
 
   </section>
+  
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCG5IaTAJlM8Q2dZJf3ILuDeA87aSBHXkM",
+      authDomain: "eml-form.firebaseapp.com",
+      projectId: "eml-form",
+      storageBucket: "eml-form.appspot.com",
+      messagingSenderId: "467951057699",
+      appId: "1:467951057699:web:4a28416477af1ac5122a96"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshot: true });
+
+  </script>
+  <script src="js/firebase.js"> </script>
 
 
 
@@ -415,6 +486,12 @@
       distance: '50px',
          
     });
+    sr.reveal('#contact-form',{
+      duration: 2000,
+      origin: 'bottom',
+      distance: '70px',
+
+    })
     
 
     
