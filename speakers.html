@@ -19,6 +19,9 @@
   <!-- AddEvent script -->
   <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+#more {display: none;}
+</style>
 
 </head>
 <body>
@@ -92,7 +95,7 @@
                     <img src="images/tejaswnimanogna.jpg" alt="Personal Trainer 1"
                         class="img-fluid border-white border-w-5 w-50 w-md-80 w-lg-60 rounded-circle">
                 </div>
-                <div class="col-md-6 flex-valign text-md-right showtxt1" style = "#more {display: none;}">
+                <div class="col-md-6 flex-valign text-md-right showtxt1" >
                     <h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-white font-weight-bold">
                         <u> Dr.Tejaswini Manogna  </u>
                     </h3>
@@ -100,9 +103,9 @@
                         <em>Miss India Earth (2019).</em>
                     </h5>
                     <hr class="hr-primary w-70 ml-0 ml-md-auto mr-md-0 mb-3">
-                    <p> Dr.TEAJSWINI MANOGNA ,the Pride of India is an internationally recognized young achiever and a meritorious MBBS-graduate from OSMANIA MEDICAL COLLEGE.She brought laurels to the Nation, honored by Prime Minister and President of India. She raised Indian Flag High in SAARC Countries. 
+                    <p>Dr.TEAJSWINI MANOGNA ,the Pride of India is an internationally recognized young achiever and a meritorious MBBS-graduate from OSMANIA MEDICAL COLLEGE.She brought laurels to the Nation, honored by Prime Minister and President of India. She raised Indian Flag High in SAARC Countries. 
 Tejaswini Manogna is crowned as Miss India –Earth 2019 and represented India at Miss Earth2019(World wide), held at Phillipines. She is the winner of  Miss Intelligent-Miss Earth 2019, Miss Talented- Miss Earth , Global People's Choice Award winner(World wide people choice), with three Gold Medals in her feather(Among 117 countries).
-She is the  ‘Beauty with a Purpose Winner’ at Miss Earth 2019 for taking ahead the project Environment-India.“Purthvi Rakhshathi Rakshithaha”.
+<span id = "dots">...</span><span id ="more">She is the  ‘Beauty with a Purpose Winner’ at Miss Earth 2019 for taking ahead the project Environment-India.“Purthvi Rakhshathi Rakshithaha”.
 TEJASWINI MANOGNA’s passion about Nation Building made her undergo national cadet corps training. With her dedication and hard work she had the honor of leading India’s contingent as Contingent Commander and adjudged as “INDIA’S BEST CADET”, “INDIA’S BEST SHOOTER” conferred by “Prime Minister’s Medal” and “President’s appreciation certification”
 She is a versatile Bharatnatyam and Music artist, highly honored to get accreditation as professional National grading artist from Govt, besides which she holds a Diploma in Performing Arts Bharatnatyam& Music. She enthralled audion’s in numerous Indian cultural heritage Concerts World over across the globe in prestigious national and international festivals and conferences, Won several honors &awards.
 She led India’s delegation internationally in 6 countries including USA,UK,SIGNAPORE,SRILANKA &UAE,Phillipines, won several awards and Medals
@@ -115,11 +118,30 @@ Tejaswini’s journey from the green fields, to the Army camps, to the Hospitals
 
 With a perfect strike of Balance in Academics and Achievements, she also dedicates her time as philanthropist in service to humanity and Girl child promotions, being the Life member for Team for enlightened action for child health and Education and Rehabilitation. 
 
-She is now the most sought out Inspirational Youth Icon, inspiring thousands of students, across the Globe, particularly in India Govt and Corporate schools and colleges, with her Nation building campaigns. She is also invited to IITS’S, IIMS and many social forums and as a TedX Speaker.
- <p></p> </p>
+She is now the most sought out Inspirational Youth Icon, inspiring thousands of students, across the Globe, particularly in India Govt and Corporate schools and colleges, with her Nation building campaigns. She is also invited to IITS’S, IIMS and many social forums and as a TedX Speaker.</span>
+</p>
 
                     <button  onclick = "myFunction()" id = "myBtn"
                             class="btn btn-light">Read more</button>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
                 </div>
             </div>
 
